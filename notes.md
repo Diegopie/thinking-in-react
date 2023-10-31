@@ -13,4 +13,6 @@
 - [] start refactoring table row as a single component
 
 ## SRC4 Demo code as a single componenet organized in it's own file
+- [] start updating state via: Identify where your state should live
 
+## SRC5 - not done
