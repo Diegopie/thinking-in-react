@@ -11,13 +11,13 @@ If efficiency is how you play then you're at the right place! I often find mysel
 &NewLine;
 &NewLine;
 
-
+## How To Use
 
 ## Table of Contents
 
 - [New Project](#new-project)
   - [Description](#description)
-  - [Updates](#updates)
+  - [How To Use](#how-to-use)
   - [Table of Contents](#table-of-contents)
   - [Development](#development)
     - [Technology Overview](#technology-overview)
