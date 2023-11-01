@@ -8,7 +8,7 @@ import EditableHoursCell from "./EditableHoursCell";
 import formatCurrency from "../../utils/formatCurrency";
 
 
-export default function InvoiceTableRow({ initialInvoiceData, initialIsEditing }) {
+export default function InvoiceTableRow({ initialInvoiceData, initialIsEditing, onDeleteRow }) {
 
   // Moved is editing to Row
   const [isEditing, setIsEditng] = useState(initialIsEditing);
@@ -28,6 +28,7 @@ export default function InvoiceTableRow({ initialInvoiceData, initialIsEditing }
         isEditing={isEditing} 
         onEditClick={setEditMode}
         onSaveClick={setNormalMode}
+        onDeleteRow={onDeleteRow}
       />
       <EditableDesctiption 
         value={description}
