@@ -37,9 +37,14 @@
 
 ## app2 - Demo ViteExpress Server, add api routes
 
+- [] Update package_json script to run form new file
+  - "dev": "nodemon server/app2.js -w server/app2.js -w server -w src",
+  - Changing each app1 to app2
 - [] Create a postman.co account and install desktop agent
     -[] This will not be an app for you computer, it just allows postman to communicate to your computer from the browser
 
 ## app3 - Demo API Routes in postman, add error handling and DELETE
 
 ## app4 - Demo Finished Server, add API requests to src7
+
+-[] npm install axios

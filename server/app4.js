@@ -28,6 +28,7 @@ app.get('/api/invoice', (req, res) => {
   res.json(TEST_DATA);
 });
 
+// Add Data
 app.post('/api/invoice', (req, res) => {
   const { description, rate, hours } = req.body;
 
@@ -43,19 +44,38 @@ app.post('/api/invoice', (req, res) => {
   res.json(newItem);
 });
 
+// Update Data
 app.put('/api/invoice/:id', (req, res) => {
   const { id } = req.params;
   const { description, rate, hours } = req.body;
 
   const index = TEST_DATA.findIndex((item) => item.id === Number(id));
-  const item = TEST_DATA[index];
 
-  // Only update the values that are provided in req.body
-  item.description = description || item.description;
-  item.rate = Number(rate) || item.rate;
-  item.hours = Number(hours) || item.hours;
+  if (index === -1) {
+    res.status(404).json({ error: `Item with ID ${id} not found.` });
+  } else {
+    const item = TEST_DATA[index];
 
-  res.json(item);
+    // Only update the values that are provided in req.body
+    item.description = description || item.description;
+    item.rate = Number(rate) || item.rate;
+    item.hours = Number(hours) || item.hours;
+
+    res.json(item);
+  }
+});
+
+// Delete Data
+app.delete('/api/invoice/:id/delete', (req, res) => {
+  const { id } = req.params;
+
+  const index = TEST_DATA.findIndex((item) => item.id === Number(id));
+  if (index === -1) {
+    res.status(404).json({ error: `Item with ID ${id} not found.` });
+  } else {
+    TEST_DATA.splice(index, 1);
+    res.json({ id: Number(id) });
+  }
 });
 
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));

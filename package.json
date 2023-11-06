@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server/app3.js -w server/app.js -w server -w src",
+    "dev": "nodemon server/app1.js -w server/app1.js -w server -w src",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.6.0",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1",
