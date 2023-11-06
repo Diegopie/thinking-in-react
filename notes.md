@@ -20,9 +20,10 @@
 
 - [] Pass prop data down from App.jsx
 
-## SRC5 Demo Table Row as Single Component, then Add Stat
+## SRC5 Demo Table Row as Single Component, then Add State
 
 - [] start updating state via: Identify where your state should live
+  - Adding state should enable edit, save, and input typing
 - [] Demo react dev tools to show child and parent components
 
 ## SRC6 - Demo Completed State, then add Add/Remove invoice rows
