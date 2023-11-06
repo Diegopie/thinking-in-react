@@ -29,3 +29,17 @@
 ## SRC6 - Demo Completed State, then add Add/Remove invoice rows
 
 ## SRC7 - Demo Completed Front End
+
+## app1 - Create ViteExpress Server
+
+- [] Update package_json with: "dev": "nodemon server/app.js -w server/app.js -w server -w src"
+- [] npm install express morgan nodemon vite-express
+
+## app2 - Demo ViteExpress Server, add api routes
+
+- [] Create a postman.co account and install desktop agent
+    -[] This will not be an app for you computer, it just allows postman to communicate to your computer from the browser
+
+## app3 - Demo API Routes in postman, add error handling and DELETE
+
+## app4 - Demo Finished Server, add API requests to src7
