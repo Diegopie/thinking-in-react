@@ -19,7 +19,6 @@ export default function InvoiceTable() {
                 <InvoiceTableHeader />
             </thead>
             <tbody>
-                {/* Pass Props Down as an Object */}
                 <InvoiceTableRow initialInvoiceData={
                     { description: 'Web Development', rate: 25, hours: 10 }}
                     initialIsEditing={isEditing}
