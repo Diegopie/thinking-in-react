@@ -1,4 +1,3 @@
-import { useState } from "react";
 // Components
 import EditableRowModeButtons from "./EditableRowModButtons";
 import EditableDesctiption from "./EditableDesctiptionCell";
@@ -8,42 +7,18 @@ import EditableHoursCell from "./EditableHoursCell";
 import formatCurrency from "../../utils/formatCurrency";
 
 
+
+
 export default function InvoiceTableRow({ initialInvoiceData, initialIsEditing }) {
 
-  // Moved is editing to Row
-  const [isEditing, setIsEditng] = useState(initialIsEditing);
-
-  const setEditMode = () => setIsEditng(true);
-  const setNormalMode = () => setIsEditng(false);
-  // const { description, rate, hours } = initialInvoiceData;
-
-  const [description, setDescription] = useState(initialInvoiceData.description);
-  const [rate, setRate] = useState(initialInvoiceData.rate);
-  const [hours, setHours] = useState(initialInvoiceData.hours);
+  const { description, rate, hours } = initialInvoiceData;
 
   return (
     <tr>
-      {/* Pass Inverse Data To Row Buttons */}
-      <EditableRowModeButtons 
-        isEditing={isEditing} 
-        onEditClick={setEditMode}
-        onSaveClick={setNormalMode}
-      />
-      <EditableDesctiption 
-        value={description}
-        isEditing={isEditing} 
-        onValueChange={setDescription}
-      />
-      <EditableRateCell 
-        value={rate}
-        isEditing={isEditing} 
-        onValueChange={setRate}
-      />
-      <EditableHoursCell 
-        value={hours}
-        isEditing={isEditing}
-        onValueChange={setHours}
-        />
+      <EditableRowModeButtons isEditing={initialIsEditing} />
+      <EditableDesctiption value={description} isEditing={initialIsEditing} />
+      <EditableRateCell value={rate} isEditing={initialIsEditing} />
+      <EditableHoursCell value={hours} isEditing={initialIsEditing} />
       <td>{formatCurrency(rate * hours)}</td>
     </tr>
   );

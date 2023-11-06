@@ -1,12 +1,8 @@
-export default function EditableDesctiption ({value, onValueChange, isEditing}) {
+export default function EditableDesctiption ({value, isEditing}) {
     return (
         isEditing ?
             <td>
-                <input 
-                    type="text"
-                    value={value}
-                    onChange={(e) => onValueChange(e.target.value)}
-                />
+                <input type="text" value={value} />
             </td>
             :
             <td>{value}</td>

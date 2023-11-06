@@ -1,6 +1,5 @@
 import './InvoiceTable.css';
-// This function was moved to a component
-// import formatCurrency from '../utils/formatCurrency';
+import formatCurrency from '../utils/formatCurrency';
 import { useState } from 'react';
 
 import InvoiceTableHeader from './InvoiceTableHeader';
@@ -8,13 +7,12 @@ import InvoiceTableAddButton from './InvoiceTableAddButton';
 import InvoiceTableRow from './TableRow/InvoiceTableRow';
 
 
-export default function InvoiceTable({ initialInvoiceList }) {
+export default function InvoiceTable({initialInvoiceList}) {
 
-    // * This state is only ever passed as a prop to row, so we can move it to Row component
-    // const [isEditing, setIsEditing] = useState(false);
-    const [invoiceList, setInvoiceList] = useState(initialInvoiceList);
+    
+    const [isEditing, setIsEditing] = useState(false);
 
-    const rows = invoiceList.map((invoiceItem) => {
+    const rows = initialInvoiceList.map((invoiceItem) => {
         const { id, description, rate, hours } = invoiceItem;
 
         return (
@@ -26,14 +24,15 @@ export default function InvoiceTable({ initialInvoiceList }) {
         );
     });
 
-
     return (
         <table>
             <thead>
                 {/* InvoiceTableHeader */}
                 <InvoiceTableHeader />
             </thead>
-            <tbody>{rows}</tbody>
+            <tbody>
+                {rows}
+            </tbody>
             <tfoot>
                 {/* InvoiceTableAddButton */}
                 <InvoiceTableAddButton />

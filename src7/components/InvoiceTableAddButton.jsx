@@ -1,9 +1,9 @@
-export default function InvoiceTableAddButton() {
+export default function InvoiceTableAddButton(props) {
     return (
         <tr>
             <td></td>
             <td colSpan="4">
-                <button>Add</button>
+                <button onClick={props.onClick}>Add</button>
             </td>
         </tr>
     )

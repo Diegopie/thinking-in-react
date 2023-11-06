@@ -10,7 +10,7 @@ const TEST_DATA = [
 
 function App() {
   return (
-    <InvoiceTable />
+    <InvoiceTable initialInvoiceList={TEST_DATA}  />
   )
 }
 

@@ -1,12 +1,12 @@
 # Thinking in React 1
 
-## Build Skelington of app
+## SRC1 Build Skelington of app
 
 - [] Start App in src1 folder
 - [] Demo making the static layout by making making a couple <tr>s
 - [] Demo changing state in dev code
 
-## Demo Static Code with Manual State Switching, then refactor into components
+## SRC2 Demo Static Code with Manual State Switching, then refactor into components
 
 - [] Demo the full static code and switching state 
 - [] Change something into a componenet 
@@ -16,13 +16,15 @@
 - [] start refactoring table row as a single component
 - [] Pass Invoice List Down from App.jsx and .map() over it using what has been built of TableComponent Row
 
-## SRC4.4 Demo Table Row as Single Component, then render using App.jsx data
+## SRC4 Demo Table Row Built as a Single Component, then Render Rows from APP_DATA
 
-## SRC4 Demo Table Row Built as a Single Componenet, then Add State
+- [] Pass prop data down from App.jsx
+
+## SRC4.4 Demo Table Row as Single Component, then Add Stat
 
 - [] start updating state via: Identify where your state should live
 - [] Demo react dev tools to show child and parent components
 
 ## SRC5 - Demo Completed State, then add Add/Remove invoice rows
 
-## SRC6 - 
+## SRC6 - Demo Completed Front End

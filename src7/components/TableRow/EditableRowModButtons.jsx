@@ -6,7 +6,7 @@ export default function (props) {
             </td >
             :
             <td>
-                <button>Delete</button>
+                <button onClick={props.onDeleteRow}>Delete</button>
                 <button onClick={props.onEditClick}>Edit</button>
             </td>
     )
